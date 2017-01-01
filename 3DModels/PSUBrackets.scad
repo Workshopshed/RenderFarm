@@ -1,7 +1,7 @@
 module vertical() {
-	translate([0,10,0])
-		cube([15,5,45]);
-	translate([0,5,10])
+	translate([0,12,0])
+		cube([15,3,43]);
+	translate([0,7,8])
 		fillet(10,15);
 }
 
@@ -24,11 +24,11 @@ module fillet(filletsize,width)
 module tab() {
 difference() {
 	union() {
-		cube([15,15,5]);
+		cube([15,15,3]);
 		translate([15/2,0,0])
-			cylinder(5,d=15,$fn=100);
+			cylinder(3,d=15,$fn=100);
 		}
-    translate([15/2,0,1])			
+    translate([15/2,0,0])			
 		countersink(3);
 	}
 }
@@ -36,7 +36,7 @@ difference() {
 module countersink(drillsize)
 	union() {
 		cylinder(drillsize*3,0,drillsize*3,$fn=100);
-		translate([0,0,-5])
+		translate([0,0,-3])
 		cylinder(10,d=drillsize,$fn=100);
 	}
 	
@@ -52,13 +52,13 @@ difference() {
 						vertical();
 					}
 			}
-			translate([0,10,40])
-				cube([15,110,5]);
+			translate([0,12,40])
+				cube([15,106,3]);
 		}
-		translate([16,115,40])
+		translate([16,113,38])
 			rotate([0,180,0])
 				fillet(10.5,16);
-		translate([0,15,40])
+		translate([-0.3,17,38])
 			rotate([180,0,0])
 				fillet(10.2,16);
 	}
