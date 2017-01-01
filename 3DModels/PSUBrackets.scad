@@ -1,6 +1,6 @@
 module vertical() {
 	translate([0,12,0])
-		cube([10,3,43]);
+		cube([10,3,43.5]);
 	translate([0,7,8])
 		fillet(10,10);
 }
@@ -45,20 +45,20 @@ difference() {
 	union() {
 			tab();
 			vertical();
-			translate([0,130,0])
+			translate([0,130.5,0])
 				mirror([0,1,0]) {
 					union() {
 						tab();
 						vertical();
 					}
 			}
-			translate([0,12,40])
-				cube([10,106,3]);
+			translate([0,12,40.5])
+				cube([10,106.5,3]);
 		}
-		translate([12,113,38])
+		translate([12,113.5,38.5])
 			rotate([0,180,0])
-				#fillet(10.5,16);
-		translate([-0.3,17,38])
+				fillet(10.5,16);
+		translate([-0.3,17,38.5])
 			rotate([180,0,0])
 				fillet(10.2,16);
 	}
