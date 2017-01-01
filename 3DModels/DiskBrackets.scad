@@ -2,17 +2,17 @@ module vertical() {
 	difference() {
 		union() {
 		translate([0,12,0])
-			cube([15,3,13]);
+			cube([10,3,13]);
 		translate([0,7,8])
-			fillet(10,15);
-		translate([15/2,15,13])
+			fillet(10,10);
+		translate([10/2,15,13])
 			rotate([90,0,0])
-				cylinder(3,d=15,$fn=100);		
+				cylinder(3,d=10,$fn=100);		
 		}
-		translate([(15/2),16,13])
+		translate([(10/2),16,13])
 			rotate([90,0,0])
 				cylinder(10,d=3,$fn=100);
-		translate([(15/2),13.5,13])
+		translate([(10/2),13.5,13])
 			rotate([90,0,0])
 				cylinder(10,d=7,$fn=100);		
 	}
@@ -37,11 +37,11 @@ module fillet(filletsize,width)
 module tab() {
 difference() {
 	union() {
-		cube([15,15,3]);
-		translate([15/2,0,0])
-			cylinder(3,d=15,$fn=100);
+		cube([10,10,3]);
+		translate([10/2,0,0])
+			cylinder(3,d=10,$fn=100);
 		}
-    translate([15/2,0,0])			
+    translate([10/2,0,0])			
 		countersink(3);
 	}
 }
@@ -65,7 +65,7 @@ module bracket() {
 					}
 			}
 			translate([0,10,0])
-				cube([15,110,3]);
+				cube([10,110,3]);
 		}
 }
 
