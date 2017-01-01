@@ -37,11 +37,12 @@ module fillet(filletsize,width)
 module tab() {
 difference() {
 	union() {
-		cube([10,10,2]);
-		translate([10/2,0,0])
+		translate([0,2,0])
+        cube([10,8,2]);
+		translate([10/2,2,0])
 			cylinder(2,d=10,$fn=100);
 		}
-    translate([10/2,0,-1])			
+    translate([10/2,2,-1])			
 		countersink(3);
 	}
 }
